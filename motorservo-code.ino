@@ -8,7 +8,7 @@
 Servo myservo; //Create front axle steering object
 Ultrasonic ultrasonic(2); // Create ultrasonic object and attach it to pin 2
 
-const int MInfra = 7; // Output pin for middle infrared sensor
+const int MInfra = 13; // Output pin for middle infrared sensor
 const int LInfra = 4; // Output pin for left infrared sensor
 const int RInfra = 12; // Output pin for right infrared sensor
 
@@ -87,6 +87,6 @@ void Turn(int direction){
  void AvoidObstacle(){
    // Avoidance of an obstacle 
    Turn(LEFT);
-   delay(800);
-   Turn(RIGHT+15);
+   delay(1000);
+   Turn(RIGHT+7);
  }
